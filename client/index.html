@@ -1,0 +1,35 @@
+<html ng-app="folio">
+  <head>
+    <base href="/"/>
+    <title>eloone's projects</title>
+    <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/assets/css/index.css" />
+  </head>
+  <body>
+
+  <div ui-view class="site-container container"></div>
+  <!-- Libraries -->
+  <script src="/bower_components/moment/min/moment.min.js"></script>
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+  <script src="/bower_components/lodash/lodash.min.js"></script>
+  <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <!-- App -->
+  <!-- inject:js -->
+  <script src="/app/main/header/header.directive.js"></script>
+  <script src="/app/components/category/category.service.js"></script>
+  <script src="/app/components/category/category.controller.js"></script>
+  <script src="/app/main/routes.js"></script>
+  <script src="/app/main/main.js"></script>
+  <script src="/app/main/config.service.js"></script>
+  <script src="/app/components/components.js"></script>
+  <script src="/app/app.js"></script>
+  <!-- endinject -->
+
+  </body>
+</html>

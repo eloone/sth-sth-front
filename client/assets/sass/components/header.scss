@@ -1,0 +1,74 @@
+.site-header {
+	a {
+		text-decoration: none;
+		color: $mainGrey;
+    	font-size: 18px;
+
+    	&.active{
+    		color: $mainOrange;
+    	}
+    }
+
+    ul {
+    	padding-left: 0;
+    }
+
+    .folio-title {
+		a {
+			font-size: 48px;
+			color: $mainOrange;
+		}
+
+		@include reenie;
+	}
+
+	.bottom {
+	    overflow: hidden;
+	    padding-bottom: 15px;
+	    margin-top: 20px;
+	}
+
+	.sections-menu {
+	    padding-right: 10px;
+	    overflow: hidden;
+	    position: relative;
+	    padding-bottom: 15px;
+	    border-bottom: 1px solid $thirdGrey;
+	    margin-bottom: 15px;
+
+	    li {
+	    	float: left;
+    		margin-bottom: 5px;
+    		list-style: none;
+	    }
+	}
+
+	.nav-menu {
+		float: left;
+
+		a {
+			font-size: 18px;
+		}
+
+		li {
+			float: left;
+    		padding: 5px 0 5px 0;
+
+    		&.item:before {
+			    content: "/";
+			    color: #ddd;
+			    font-size: 20px;
+			    padding: 0 15px 0 15px;
+			    font-weight: lighter;
+			}
+
+			&:first-child {
+			    padding-left: 0;
+			    padding-top: 7px;
+			    overflow: hidden;
+			}
+
+		}
+	}
+
+}

@@ -1,0 +1,22 @@
+indexes:
+
+- kind: project
+  ancestor: no
+  properties:
+  - name: tags
+  - name: date
+    direction: asc
+
+- kind: project
+  ancestor: no
+  properties:
+  - name: tags
+  - name: date
+    direction: desc
+
+- kind: project
+  ancestor: yes
+  properties:
+  - name: tags
+  - name: date
+    direction: asc

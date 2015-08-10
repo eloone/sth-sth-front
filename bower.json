@@ -1,0 +1,28 @@
+{
+  "name": "portolio-front",
+  "version": "0.1.0",
+  "authors": [
+    "eloone <elodie.rafali@gmail.com>"
+  ],
+  "description": "eloone's projects",
+  "main": "client/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angularjs": "~1.4.3",
+    "font-awesome": "~4.4.0",
+    "angular-ui-router": "~0.2.15",
+    "angular-resource": "~1.4.3",
+    "lodash": "~3.10.1",
+    "angular-bootstrap": "~0.13.3",
+    "jquery-ui": "~1.11.4",
+    "moment": "~2.10.6"
+  }
+}

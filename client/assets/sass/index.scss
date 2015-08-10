@@ -1,0 +1,45 @@
+@import 'mixins';
+@import 'variables';
+@import './components/header.scss';
+@import './components/grid.scss';
+
+body {
+	background: url(/assets/img/bg_body_left_small.png) repeat-y left top, url(/assets/img/bg_body_right_small.png) repeat-y right top;
+	font-size: 13px;
+	font-family: Verdana, Arial, Helvetica, Trebuchet;
+}
+
+a {
+	color: $mainOrange;
+	&:hover{
+		color: $mainOrange;
+		text-decoration: none;
+	}
+}
+
+.site-container {
+	width: 1024px;
+}
+
+.page-category {
+	h2 {
+		color: $mainOrange;
+	}
+}
+
+.ui-tooltip {
+	padding: 5px;
+	position: absolute;
+	z-index: 9999;
+	max-width: 300px;
+	background: darken($bgCyan, 30);
+	color: white;
+}
+
+body .ui-tooltip {
+	border-width: 2px;
+}
+
+.ui-helper-hidden-accessible {
+	display: none;
+}
