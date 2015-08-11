@@ -5,7 +5,8 @@
 	$stateProvider
 	    .state('root', {
 	      abstract: true,
-	      templateUrl: '/app/main/main.html'
+	      templateUrl: '/app/main/main.html',
+	      controller: 'MainCtrl'
 	    })
 	    .state('root.404', {
 	      url: '/404',
@@ -17,7 +18,8 @@
 	    })
 	    .state('root.home', {
 	    	url: '/',
-	    	templateUrl: '/app/components/home.html'
+	    	templateUrl: '/app/components/home/home.html',
+	    	controller: 'HomeCtrl'
 	    })
 	    .state('root.about', {
 	    	url: '/about',

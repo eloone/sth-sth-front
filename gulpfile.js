@@ -29,8 +29,8 @@ gulp.task('lint', function() {
 gulp.task('sass', function() {
   gulp.src('client/assets/sass/*.scss')
     .pipe(sass())
-    .pipe(gulp.dest('client/assets/css/'))
-    .pipe(livereload());
+    .pipe(gulp.dest('client/assets/css/'));
+    //.pipe(livereload());
 });
 
 gulp.task('livereload', function() {

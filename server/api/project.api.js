@@ -6,7 +6,7 @@ var projectApi = documentApi({
   kind: 'Portfolio',
   kindName: 'projects',
   entity: 'project',
-  orderBy: 'date',
+  orderBy: '-date',
   handlers: {
     getCategory: getCategory
   }

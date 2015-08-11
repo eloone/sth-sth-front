@@ -1,5 +1,5 @@
 (function(angular){
-	angular.module('folio.components.categoryService', ['ngResource'])
+	angular.module('folio.components.lib.categoryService', ['ngResource'])
 	.factory('CategoryResource', ['$resource', CategoryResource]);
 
 	function CategoryResource($resource){

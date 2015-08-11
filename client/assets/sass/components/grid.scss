@@ -1,3 +1,9 @@
+.projects-count {
+  font-size: 24px;
+  @include retro;
+  color: $mainOrange;
+}
+
 .flex-container {
   padding: 0;
   margin: 0;
@@ -27,9 +33,10 @@
     color: $textCyanLight;
     font-size: 45px;
     margin-top: 90px;
+    @include retro;
 
     .content {
-      background: $bgCyan;
+      background: rgba($brightCyan, 0.3);
       width: 264px;
       height: 70px;
       box-shadow: -8px 4px 12px #ddd;
@@ -43,7 +50,7 @@
       height: 0;
       border-style: solid;
       border-width: 35px 0 35px 27px;
-      border-color: transparent transparent transparent $bgCyan;
+      border-color: transparent transparent transparent rgba($brightCyan, 0.3);
     }
 
   }
@@ -67,7 +74,7 @@
     background: rgba($brightCyan, 0.3);
     border: 2px dashed $borderCyan;
     border-radius: 5px;
-    color: $textCyan;
+    color: $textCyanLight;
     font-size: 16px;
     font-family: courier;
 

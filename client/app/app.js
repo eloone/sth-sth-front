@@ -1,5 +1,6 @@
 (function(angular){
 	angular.module('folio', [
+		'folio.lib',
 		'folio.main',
 		'folio.components'
 	])

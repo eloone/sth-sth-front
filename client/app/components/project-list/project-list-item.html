@@ -1,0 +1,24 @@
+ <li ng-class="{year: !project.title, project: project.title}" class="flex-item list-item">
+	<div title="My projects for {{project}}" class="content" ng-if="!project.title">
+		{{project}}
+		<div class="triangle"></div>
+	</div>
+
+	<div ng-if="project.title">
+  	<span ng-if="project.type.title" class="project-type">{{project.type.title}}</span>
+  	<div class="figure">
+  		<img class="thumbnail" src="{{project.thumbLink}}" alt="thumb"/>
+  	</div>
+  	<p class="project-title">{{project.title}}</p>
+  	<p class="project-tagline">{{project.tagline}}</p>
+  	<div class="project-overlay">
+  		<a ui-sref="root.home" class="play-btn" title="View project">
+	  		<ul class="tag-list list-inline">
+	  			<li class="tag" ng-if="tag.title" ng-repeat="tag in project.tags">
+	  				{{tag.title}}
+	  			</li>
+	  		</ul>
+  		</a>
+  	</div>
+	</div>
+</li>

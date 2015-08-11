@@ -1,8 +1,10 @@
-<div class="page-category">
+<div class="page-home">
 	<ul class="flex-container">
 	  <li class="flex-item list-item category-box">
-	  	<h2>{{category.title}}</h2>
-	  	<div ng-show="category.desc" class="desc" ng-bind-html="category.desc | textOnly"></div>
+	  	<h2>All</h2>
+	  	<div class="desc">
+	  		All my <span class="projects-count">{{projects.length}}</span> projects since <b>{{startYear}}</b>.
+	  	</div>
 	  </li>
 	  <project-list-item project="project" ng-repeat="project in projects"></project-list-item>
 	</ul>

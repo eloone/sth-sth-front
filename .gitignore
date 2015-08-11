@@ -27,3 +27,6 @@ bower_components
 
 key.json
 *~
+
+client/app/.DS_Store
+.DS_Store

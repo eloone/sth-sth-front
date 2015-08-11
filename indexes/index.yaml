@@ -17,6 +17,5 @@ indexes:
 - kind: project
   ancestor: yes
   properties:
-  - name: tags
   - name: date
-    direction: asc
+    direction: desc

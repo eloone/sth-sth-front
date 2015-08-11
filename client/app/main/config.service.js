@@ -1,9 +1,9 @@
 (function(angular){
-	angular.module('folio.main.config', ['folio.components.categoryService'])
+	angular.module('folio.main.config', [])
 	.value('values', {})
-	.factory('AppConfig', ['CategoryResource', 'values', AppConfigService]);
+	.factory('AppConfig', ['values', AppConfigService]);
 
-	function AppConfigService(CategoryResource, values){
+	function AppConfigService(values){
 
 		return {
 			get: function(key){

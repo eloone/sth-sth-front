@@ -17,11 +17,29 @@ a {
 	}
 }
 
+footer {
+	border-top: 1px solid #eee;
+	color: #aaa;
+	text-align: right;
+	font-size: 22px;
+	padding: 20px 0;
+	margin-top: 50px;
+	font-family: 'League Script', cursive;
+	font-weight: 400;
+	a {
+		font-weight: bold;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
 .site-container {
 	width: 1024px;
 }
 
-.page-category {
+.page-category, .page-home {
 	h2 {
 		color: $mainOrange;
 	}

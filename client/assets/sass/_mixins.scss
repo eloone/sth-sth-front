@@ -2,6 +2,10 @@
 	font-family: 'Reenie Beanie', cursive;
 }
 
+@mixin retro {
+	font-family: 'Love Ya Like A Sister', arial;
+}
+
 @mixin expand {
 	position: absolute;
 	top: 0;
