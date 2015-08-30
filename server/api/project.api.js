@@ -11,12 +11,13 @@ var projectApi = documentApi({
     getCategory: getCategory
   }
 });
-
+// Gets projects by category
 function getCategory(category, callback){
   var ds = this.ds;
   var formatItem = this.formatItem;
   var q = ds.createQuery('project')
   .filter('tags =', category)
+  .filter('tags =', 'personal-category')
   .order('-date');
 
   ds.runQuery(q, function(err, items) {

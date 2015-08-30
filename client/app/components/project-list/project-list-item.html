@@ -12,7 +12,7 @@
   	<p class="project-title">{{project.title}}</p>
   	<p class="project-tagline">{{project.tagline}}</p>
   	<div class="project-overlay">
-  		<a ui-sref="root.home" class="play-btn" title="View project">
+  		<a ui-sref="root.project({id: project.id, previousState: previousState})" class="play-btn" title="View project">
 	  		<ul class="tag-list list-inline">
 	  			<li class="tag" ng-if="tag.title" ng-repeat="tag in project.tags">
 	  				{{tag.title}}

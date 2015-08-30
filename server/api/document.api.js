@@ -1,6 +1,7 @@
 'use strict';
 
 var _ = require('lodash');
+var async = require('async');
 
 var projectId = process.env.GAE_LONG_APP_ID || process.env.DATASET_ID || 'portfolio-997';
 
@@ -55,21 +56,51 @@ function documentApi(settings){
   };
 
   this.get = function(id, callback) {
-    ds.get(ds.key([settings.kind, settings.kindName, settings.entity, id]), function(err, item) {
-      if (err) {
-        callback(err);
-        return;
-      }
+    id = decodeURIComponent(id);
 
-      if (!item) {
-        callback({
-          code: 404,
-          message: 'No matching entity was found.'
+    if(!_.contains(id, ';')) {
+      query(id, callback);
+    } else {
+      var results = [];
+      // Multiple ids are separated by ;
+      var ids = id.split(';');
+
+      async.each(ids, function(id, next){
+        query(id, function(err, result){
+          if(err) {
+            console.log(err);
+            // We don't block next items
+            return next();
+          };
+
+          results = results.concat(result);
+          next();
         });
-        return;
-      }
-      callback(null, [formatItem(item)]);
-    });
+      }, function(err){
+        if(err) return callback(err);
+        callback(null, results);
+      });
+    }
+
+    function query(id, callback){
+      ds.get(ds.key([settings.kind, settings.kindName, settings.entity, id]), function(err, item) {
+        if (err) {
+          callback(err);
+          return;
+        }
+
+        if (!item) {
+          callback({
+            code: 404,
+            message: 'No matching entity was found.' + ' id= ' + id
+          });
+          return;
+        }
+
+        callback(null, [formatItem(item)]);
+      });
+    }
+
   };
 
   if(settings.handlers){

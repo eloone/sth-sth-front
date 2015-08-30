@@ -1,0 +1,49 @@
+<div class="page-project">
+  <h1>
+    {{project.title}}
+    <a ng-if="$state.params.previousState" class="home-link" ng-click="back()"><i class="fa fa-arrow-left"></i>Back</a>
+    <a ng-if="!$state.params.previousState" class="home-link" ui-sref="root.home"><i class="fa fa-home"></i>Home</a>
+  </h1>
+  <div class="row project-flash-card">
+  <ul class="project-details col-md-6">
+    <li class="project-desc">
+      <span class="label">Description</span> {{project.tagline}}
+    </li>
+    <li ng-if="project.role">
+      <span class="label">URL</span> <a target="_blank" href="{{project.url}}">{{project.url}}</a>
+    </li>
+    <li class="project-role">
+      <span title="My role in this project" class="label">[my] Role</span> {{project.role}}
+    </li>
+    <li ng-if="type"  class="project-type">
+      <span class="label">Type</span>{{type}}
+    </li>
+    <li ng-if="categories.length"  class="project-skills">
+      <span class="label">Skills</span>{{skills}}
+    <li ng-if="categories.length" class="project-category">
+      <span class="label">Categories</span> {{categories}}
+    </li>
+    <li class="project-date">
+      <span class="label">Date of release</span> {{project.date}}
+    </li>
+  </ul>
+  <div class="col-md-6">
+    <a title="View screenshots" href="#screens"><img ng-show="project.thumbLink" ng-click="anchorscroll()" class="thumb" src="{{project.thumbLink}}"/></a>
+  </div>
+</div>
+<div class="project-summary">
+  <div ng-bind-html="project.summaryText"></div>
+  <a ng-click="anchorscroll()" class="more-link" ng-if="project.hasFullText" href="#more">More details</a>
+</div>
+<div id="screens" class="slideshow">
+  <div class="carousel-header">
+    <div class="project-url">URL: <a target="_blank" href="{{project.url}}">{{project.urlTitle}}</a></div>
+    <div ng-show="currentSlide.mediaLink" class="fullscreen-btn"><a target="_blank" title="Enlarge" href="{{currentSlide.mediaLink}}"><i class="fa fa-expand"></i></a></div>
+  </div>
+  <folio-carousel current-slide="currentSlide" medias="project.publishedMedias"></folio-carousel>
+</div>
+<div id="more">
+  <div class="project-full-text" ng-bind-html="project.fullText"></div>
+</div>
+
+</div>

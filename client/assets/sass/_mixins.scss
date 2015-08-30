@@ -6,10 +6,22 @@
 	font-family: 'Love Ya Like A Sister', arial;
 }
 
+@mixin defaultFont {
+	font-family: Verdana, Arial, Helvetica, Trebuchet;
+}
+
 @mixin expand {
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
+}
+
+@mixin firstLetter {
+	&:first-letter {
+	    font-size: 24px;
+	    color: darken($bgCyan, 35);
+	    font-weight: bold;
+	}
 }

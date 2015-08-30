@@ -15,7 +15,7 @@ function setApiRouter(routeName, api, apiHandler){
 	  apiHandler.get(req.params.id, handleApiResponse(res, 200));
 	});
 
-	if(apiHandler.getCategory){
+	if(apiHandler.getCategory) {
 		api.get('/' + routeName + '/category/:category', function(req, res) {
 		  apiHandler.getCategory(req.params.category, handleApiResponse(res, 200));
 		});

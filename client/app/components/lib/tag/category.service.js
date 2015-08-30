@@ -16,6 +16,14 @@
 					id: '@id'
 				}
 			},
+			getTagsById: {
+				url: '/api/tags/:ids',
+				method: 'GET',
+				isArray: true,
+				params: {
+					ids: '@ids'
+				}
+			},
 			getAllTags: {
 				url: '/api/tags',
 				method: 'GET',

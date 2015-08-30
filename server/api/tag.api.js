@@ -1,6 +1,7 @@
 'use strict';
 
 var documentApi = require('./document.api');
+var async = require('async');
 
 var tagApi = documentApi({
   kind: 'Portfolio',

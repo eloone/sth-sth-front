@@ -1,0 +1,13 @@
+<div class="project-carousel">
+    <carousel no-wrap="noWrapSlides">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <div class="media">
+          <img data-xcenter="{{slide.media.xcenter}}" data-ycenter="{{slide.media.ycenter}}" ng-if="slide.type === 'image'" ng-src="{{slide.mediaLink}}" style="margin:auto;">
+          <div class="media-html" ng-if="slide.type === 'html'" ng-bind-html="$sce.trustAsHtml(slide.media.html)"></div>
+        </div>
+        <div class="carousel-caption">
+          <h4 ng-if="slide.text" ng-bind-html="slide.text"></h4>
+        </div>
+      </slide>
+    </carousel>
+</div>

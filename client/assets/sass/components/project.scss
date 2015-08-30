@@ -1,0 +1,194 @@
+.page-project {
+	h1 {
+		font-size: 48px;
+		@include reenie;
+		color: $mainOrange;
+	}
+
+	.project-carousel {
+		iframe {
+			width: 994px;
+			height: 500px;
+			margin: -15px 0 0 -15px;
+		}
+
+		.media-html {
+			padding: 15px;
+			text-align: left;
+		}
+	}
+
+	color: $darkGrey;
+	font-size: 14px;
+
+	.home-link {
+		float: right;
+		font-size: 18px;
+		@include defaultFont;
+		margin-top: 15px;
+		cursor: pointer;
+
+		&:hover {
+			i {
+				font-weight: bold;
+			}
+		}
+
+		i {
+			margin-right: 10px;
+		}
+	}
+
+	.thumb {
+		width: 300px;
+		float: right;
+		border: 1px solid rgba($textCyan, 0.2);
+	}
+
+	.more-link {
+		float: right;
+	}
+
+	.project-flash-card {
+		margin: 20px 0;
+	}
+
+	.project-full-text {
+		margin-top: 20px;
+
+		h3 {
+		    @include firstLetter;
+		}
+
+		img {
+			margin: 20px auto;
+		    display: block;
+		    border: 10px white solid;
+		    box-shadow: 3px 3px 10px $secondGrey;
+		}
+	}
+
+	.project-summary {
+		p:first-child {
+			 @include firstLetter;
+		}
+	}
+
+	.project-summary, .project-full-text {
+		background: rgba($bgCyan, 0.1);
+		padding: 20px;
+		margin-bottom: 20px;
+		overflow: hidden;
+	}
+
+	.project-details {
+		.label {
+			color: $textCyan;
+			font-size: 14px;
+			font-weight: normal;
+			padding: 0;
+			margin-right: 10px;
+		}
+
+		list-style: none;
+
+		li {
+			padding: 3px;
+			margin-bottom: 5px;
+			border-bottom: 1px solid rgba($textCyan, 0.2);
+		}
+	}
+
+	.project-carousel {
+		img {
+			//height: 500px;
+			min-width: 992px;
+		}
+
+		.media {
+			height: 500px;
+			overflow: hidden;
+			border: 1px solid darken($bgCyan, 35);
+		}
+
+	}
+
+	.carousel-header {
+		padding: 10px 20px;
+	    font-size: 18px;
+	    //background: rgba(6, 108, 132, 0.85);
+	    //background: rgba(107, 234, 255, 0.15);
+	    background: darken($bgCyan, 35);
+	    color: white;
+	    overflow: hidden;
+	    .project-url {
+			float: left;
+			a {
+				color: white;
+				text-decoration: underline;
+				&:hover {
+					color: lighten($mainOrange, 2);
+				}
+			}
+		}
+
+	    .fullscreen-btn {
+	    	float: right;
+	    	margin-top: 5px;
+	    	font-size: 20px;
+	    	cursor: pointer;
+			a {
+				text-shadow: 0 1px 2px rgba(0,0,0,.6);
+				color: white;
+				opacity: 0.5;
+				&:hover {
+					opacity: 1;
+				}
+			}
+	    }
+	}
+
+	.carousel-caption {
+		position: relative;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: darken($bgCyan, 35);
+		min-height: 70px;
+		padding-top: 10px;
+		text-shadow: none;
+
+		h4 {
+			margin-top: 0;
+		}
+	}
+
+	.carousel-indicators li {
+		margin-left: 10px;
+		width: 15px;
+		height: 15px;
+	}
+
+	.carousel-indicators .active {
+		width: 17px;
+		height: 17px;
+	}
+
+	.carousel-control {
+		top: auto;
+		bottom: 35px;
+		cursor: pointer;
+
+		&.left {
+			left: -45px;
+		}
+
+		&.right {
+			right: -45px;
+		}
+	}
+
+	.carousel-indicators {
+		bottom: 0;
+	}
+}
