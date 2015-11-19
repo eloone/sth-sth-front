@@ -4,7 +4,8 @@
   "description": "eloone's projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "APP_ENV=production node run.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,10 +15,10 @@
     "express": "^4.13.3",
     "gcloud": "^0.8.1",
     "lodash": "^3.10.1",
-    "serve-static": "^1.10.0"
+    "serve-static": "^1.10.0",
+    "gulp": "^3.8.8"
   },
   "devDependencies": {
-    "gulp": "^3.8.8",
     "gulp-angular-filesort": "^1.1.1",
     "gulp-inject": "^1.5.0",
     "gulp-jshint": "^1.8.5",

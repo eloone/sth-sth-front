@@ -309,6 +309,9 @@ a {
     color: #EA6E06;
     text-decoration: none; }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
 footer {
   border-top: 1px solid #eee;
   color: #aaa;

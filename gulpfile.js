@@ -30,7 +30,6 @@ gulp.task('sass', function() {
   gulp.src('client/assets/sass/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('client/assets/css/'));
-    //.pipe(livereload());
 });
 
 gulp.task('livereload', function() {
@@ -53,7 +52,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('serve', function(cb) {
-  app.listen(8081, function(){
-    console.log('Server running on 8081');
-  });
+  require('./run.js');
 });

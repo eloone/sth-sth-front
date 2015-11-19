@@ -1,6 +1,7 @@
 'use strict';
 
 var documentApi = require('./document.api');
+var appEnv = process.env.APP_ENV || 'development';
 
 var projectApi = documentApi({
   kind: 'Portfolio',
@@ -15,9 +16,8 @@ var projectApi = documentApi({
 function getCategory(category, callback){
   var ds = this.ds;
   var formatItem = this.formatItem;
-  var q = ds.createQuery('project')
+  var q = ds.createQuery(appEnv, 'project')
   .filter('tags =', category)
-  .filter('tags =', 'personal-category')
   .order('-date');
 
   ds.runQuery(q, function(err, items) {

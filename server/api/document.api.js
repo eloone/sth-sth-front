@@ -2,15 +2,13 @@
 
 var _ = require('lodash');
 var async = require('async');
+var config = require('../../config.json');
 
-var projectId = process.env.GAE_LONG_APP_ID || process.env.DATASET_ID || 'portfolio-997';
+var projectId = process.env.GAE_ID || config.gaeId;
+var appEnv = process.env.APP_ENV || 'development';
 
 if (!projectId) {
-  var MISSING_ID = [
-    'Cannot find your project ID. Please set an environment variable named ',
-    '"DATASET_ID", holding the ID of your project.'
-  ].join('');
-  throw new Error(MISSING_ID);
+  throw new Error('Missing GAE_ID');
 }
 
 var gcloud = require('gcloud')({
@@ -39,7 +37,7 @@ function documentApi(settings){
 
   this.getAll = function(callback) {
 
-    var q = ds.createQuery(settings.entity)
+    var q = ds.createQuery(appEnv, settings.entity)
       .hasAncestor(ds.key([settings.kind, settings.kindName]));
 
     if(settings.orderBy){
@@ -83,7 +81,7 @@ function documentApi(settings){
     }
 
     function query(id, callback){
-      ds.get(ds.key([settings.kind, settings.kindName, settings.entity, id]), function(err, item) {
+      ds.get(ds.key({ namespace: appEnv, path: [settings.kind, settings.kindName, settings.entity, id] }), function(err, item) {
         if (err) {
           callback(err);
           return;

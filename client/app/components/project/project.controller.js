@@ -19,6 +19,7 @@
 		if($state.params.id){
 			ProjectResource.get({id: $state.params.id}, function(res){
 				$scope.project = res[0];
+
 				$scope.project.summaryText = $sce.trustAsHtml($scope.project.summaryText);
 				$scope.project.hasFullText = $($scope.project.fullText).text().trim() !== '';
 				$scope.project.date = moment($scope.project.date).format('MMMM, Do YYYY');

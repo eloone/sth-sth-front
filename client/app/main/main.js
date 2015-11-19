@@ -11,7 +11,7 @@
 	function MainCtrl($state, $scope){
 		$.widget.bridge('uitooltip', $.ui.tooltip);
 		$scope.$state = $state;
-		console.log('$state', $state)
+
 		$(document).uitooltip({
 	      track: true,
 	      show: {
