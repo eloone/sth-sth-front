@@ -18,9 +18,10 @@
     <li ng-if="type"  class="project-type">
       <span class="label">Type</span>{{type}}
     </li>
-    <li ng-if="categories.length"  class="project-skills">
+    <li ng-if="skills" class="project-skills">
       <span class="label">Skills</span>{{skills}}
-    <li ng-if="categories.length" class="project-category">
+    </li>
+    <li ng-if="categories" class="project-category">
       <span class="label">Categories</span> {{categories}}
     </li>
     <li class="project-date">
@@ -42,7 +43,7 @@
   </div>
   <folio-carousel ng-show="project.publishedMedias.length" current-slide="currentSlide" medias="project.publishedMedias"></folio-carousel>
 </div>
-<div ng-show="project.fullText" id="more">
+<div ng-show="project.hasFullText" id="more">
   <div class="project-full-text" ng-bind-html="project.fullText"></div>
 </div>
 

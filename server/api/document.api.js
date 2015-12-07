@@ -81,6 +81,12 @@ function documentApi(settings){
     }
 
     function query(id, callback){
+      var idNb = parseInt(id);
+
+      if(idNb || idNb === 0){
+        id = idNb;
+      }
+
       ds.get(ds.key({ namespace: appEnv, path: [settings.kind, settings.kindName, settings.entity, id] }), function(err, item) {
         if (err) {
           callback(err);

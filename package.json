@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "APP_ENV=production node run.js"
+    "start": "APP_ENV=production  node run.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +13,7 @@
     "async": "^1.4.2",
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
-    "gcloud": "^0.8.1",
+    "gcloud": "^0.25.1",
     "lodash": "^3.10.1",
     "serve-static": "^1.10.0",
     "gulp": "^3.8.8"
