@@ -8,6 +8,7 @@
 			this.get = function(responseProjects, allTags){
 				var projects = [];
 				var perYear = {};
+				var projectCards = [];
 
 				_.forEach(responseProjects, function(project){
 					var year = moment(project.date).year();
@@ -33,11 +34,13 @@
 				_.forEach(years, function(year){
 					projects.push(year);
 					projects = projects.concat(perYear[year]);
+					projectCards = projectCards.concat(perYear[year]);
 				});
 
 				return {
 					projects: projects,
-					years: years
+					years: years,
+					count: projectCards.length
 				};
 			};
 		}

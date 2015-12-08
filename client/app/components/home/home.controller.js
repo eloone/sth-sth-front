@@ -26,6 +26,7 @@
 			ProjectResource.get(function(res){
 				var projectList = ProjectList.get(res, allTags);
 				$scope.projects = projectList.projects;
+				$scope.projectsCount = projectList.count;
 				$scope.startYear = projectList.years.pop();
 			});
 		}
